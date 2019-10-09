@@ -32,7 +32,7 @@
 module multiplier #(parameter RESOLUTION = 4) (
     input [(RESOLUTION-1):0] A,
     input [(RESOLUTION-1):0] B,
-    output [((2*RESOLUTION)+1):0] out
+    output [((2*RESOLUTION)-1):0] resoluteOut
     );
     
     // such a labyrinthine mess of wires
@@ -47,14 +47,14 @@ module multiplier #(parameter RESOLUTION = 4) (
     assign  p3 = A & {4{B[3]}};
 
     // final product assignments    
-    assign out[0] = p0[0];
-    assign out[1] = s11;
-    assign out[2] = s22;
-    assign out[3] = s32;
-    assign out[4] = s34;
-    assign out[5] = s35;
-    assign out[6] = s36;
-    assign out[7] = s37;
+    assign resoluteOut[0] = p0[0];
+    assign resoluteOut[1] = s11;
+    assign resoluteOut[2] = s22;
+    assign resoluteOut[3] = s32;
+    assign resoluteOut[4] = s34;
+    assign resoluteOut[5] = s35;
+    assign resoluteOut[6] = s36;
+    assign resoluteOut[7] = s37;
 
     // first stage
     half_adder ha11 (p0[1],p1[0],s11,c11);
