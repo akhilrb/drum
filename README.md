@@ -42,3 +42,11 @@ The figure below shows `operandA` and `operandB` looping from 17 to 31 (decimal)
   
 The figure below shows one iteration of the testbench's outer loop, with `operandA` fixed at 17 and `operandB` ramping from 17 to 31.  
 ![oneExample](assets/oneOuterLoop.png)
+
+  
+  
+  
+The figure below shows 50 iterations of `operandA` x `operandB` where A ramps from 10 to 18 in increments of 2 while B ramps in single increments.  
+It can be seen that the steering logic determines to approximate the operand value whenever it goes higher than the RESOLUTION (4 bits). Correspondingly, signals `truncateOperandA` and `truncateOperandB` are altered.  
+All variables are hopefully self-explanatory.  
+![approximate](assets/approximateBehaviour.png)
