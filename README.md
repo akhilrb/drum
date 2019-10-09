@@ -36,9 +36,9 @@ Naturally, a `break` statement will be necessary for prioritising the MSB, which
 # Simulation Reults
 
 The figure below shows `operandA` and `operandB` looping from 17 to 31 (decimal).  
-![allCondensed][assets/allCondensed.png]
+![allCondensed](assets/allCondensed.png)
 
   
   
 The figure below shows one iteration of the testbench's outer loop, with `operandA` fixed at 17 and `operandB` ramping from 17 to 31.  
-![oneExample][assets/oneOuterLoop.png]
+![oneExample](assets/oneOuterLoop.png)
