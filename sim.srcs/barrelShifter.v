@@ -23,10 +23,12 @@
 module barrelShifter #(parameter IN_WIDTH = 4, OUT_WIDTH = 8) (
     input [IN_WIDTH-1 : 0] dataIn,
     input [$clog2(OUT_WIDTH):0] shiftAmount,    // shift amount wouldn't cross beyond log(OUT_WIDTH)
-    output [OUT_WIDTH-1 : 0] shiftedOut
+    output [OUT_WIDTH-1 : 0] shiftedOut,
+    input clk,
+    input reset
     );
 
-    // barrel shifting -> combinational logic -> no clock dependency   
-    assign shiftedOut = dataIn << shiftAmount;
+// barrel shifting -> combinational logic -> no clock dependency   
+assign shiftedOut = dataIn << shiftAmount;
 
 endmodule
