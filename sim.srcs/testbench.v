@@ -31,9 +31,9 @@ approxMultiplier #(.MAIN_RESOLUTION(TEST_RESOLUTION), .MAIN_WIDTH(TEST_WIDTH)) A
 
 initial begin
     reset = 1'b1; #2 reset = 1'b0; #18;
-    for(i=17; i<32; i=i+1)
+    for(i=10; i<20; i=i+2)
     begin
-        for(j=17; j<32; j=j+1)
+        for(j=10; j<20; j=j+1)
         begin
             A = i; B = j;
             clk = 1'b1; #5;
